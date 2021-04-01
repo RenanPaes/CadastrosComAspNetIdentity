@@ -1,0 +1,22 @@
+﻿@model Forum.ViewModels.ContaRegistrarViewModel
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro</h2>
+
+@using (Html.BeginForm())
+{
+    <h4>Para de preguiça e cadastra um usuário ai!!!</h4>
+    <hr />
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    @Html.EditorForModel()
+
+    <div class="editor-field" style="margin-top: 15px;">
+        <input type="submit" value="Registrar" class="btn btn-default" />
+    </div>
+}
+
